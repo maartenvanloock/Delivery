@@ -1,0 +1,257 @@
+
+//--------CUSTOM VARIABLES--------//
+//-------------------------------//
+
+$primary-blue: #3b5685;
+$background: #ececec;
+$text-grey: #b9b9b9;
+$text-black: #424242;
+$line-divider-light-grey: #e4e4e4;
+$line-divider-dark-grey: #cecdcd;
+$container-width: 100%;
+
+
+//------------IMPORTS------------//
+//-------------------------------//
+
+@import "settings";
+@import "foundation";
+
+
+//-------CUSTOM TRANSITIONS-------//
+//-------------------------------//
+
+.toggle {
+  transition: linear 1s;
+}
+
+.toggle.ng-enter{
+  opacity: 0;
+}
+
+.toggle.ng-enter-active{
+  opacity: 1;
+}
+
+.toggle.ng-leave{
+  opacity: 1;
+}
+
+.toggle.ng-leave-active{
+  opacity: 0;
+}
+
+.box { color: white; text-align: center; height: 100px; font-size: 86px; }
+.on  { background-color: green; }
+.off { background-color: red; }
+
+
+.box-show-setup, .box-hide-setup {
+  -webkit-transition:all linear 0.3s;
+  -moz-transition:all linear 0.3s;
+  -ms-transition:all linear 0.3s;
+  -o-transition:all linear 0.3s;
+  transition:all linear 0.3s;
+}
+
+.box-show-setup { opacity:0; height: 0; }
+.box-show-setup.box-show-start { opacity:1; height: 100px; }
+
+.box-hide-setup { opacity:1; height: 0; }
+.box-hide-setup.box-hide-start { opacity:0; height: 100px; }
+
+.base-class {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.base-class.my-class {
+  color: red;
+  font-size:3em;
+}
+
+.scaleFullScreen {
+	@include scale(
+    $dir: in, // Specify in or out
+    $from: 0, // 0.5 = 50% of the element's normal size
+    $to: 1, // 1.5 = 150%
+    $fade: true, // If true, the element fades simultaneously
+    $duration: 0.5s,
+    $timing: easeIn,
+    $delay: 0.25s
+  );
+}
+
+
+//---------CUSTOM CLASSES--------//
+//-------------------------------//
+
+// Primary
+
+body {
+	background-color: $background;
+}
+
+hr {
+	border: 1px solid $line-divider-light-grey;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+p {
+	font-size: rem-calc(16);
+	margin-bottom: rem-calc(10);
+	color: $text-grey;
+}
+
+.button {
+	border-radius: 5px;
+	margin-right: 0;
+	padding: 0.5em;
+}
+
+ul li {
+	color: $text-grey;
+	display: inline;
+	list-style-type: none;
+}
+
+.size-26 {
+	font-size: rem-calc(26);
+	vertical-align: middle;
+}
+
+.size-40 {
+	font-size: rem-calc(40);
+	vertical-align: middle;
+}
+
+.li-text {
+	vertical-align: middle;
+	margin-left: rem-calc(5);
+}
+
+
+// Panel-left index
+
+.panel-left {
+	min-width: 33.33333%;
+}
+
+// Title-bar index
+
+.title-bar {
+	margin-bottom: rem-calc(20);
+	padding: 0.5em 1em 0.5em 1em !important;
+}
+
+.contact-list {
+	padding-bottom: 0;
+	margin-right: 0;
+}
+
+
+//-----------HOME VIEW-----------//
+//-------------------------------//
+
+// Sidebar
+
+#sidebar {
+	border-right: 2px solid $line-divider-dark-grey;
+
+	@include breakpoint(large) {
+		@include grid-content(4);
+		@include grid-orient(vertical);
+		@include grid-wrap(false);
+		@include grid-align(left);
+		@include grid-order(0);
+	}
+}
+
+.card {
+	height: auto;
+	border-radius: 0;
+	border: none;
+	margin-bottom: rem-calc(20);
+}
+
+.card-extra-info {
+	@extend .card;
+	width: 100%;
+}
+
+.card h4, .card h3 {
+	color: $text-black;
+	margin-top: 0;
+}
+
+.card p {
+	color: $text-grey;
+	margin-bottom: 5px;
+}
+
+.display-time, .display-button {
+	margin: 0;
+}
+
+#date-card-info {
+	padding: 0.5em 1em 0.5em 1em;
+}
+
+.display-time li {
+	color: $text-grey;
+	display: inline;
+	list-style-type: none;
+}
+
+.display-button li {
+	display: inline;
+	list-style-type: none;
+	margin-right: 5px;
+}
+
+// Main
+
+#main {
+	@include breakpoint(large) {
+		@include grid-block(8);
+		@include grid-orient(vertical);
+	}
+}
+
+#map, #delivery-info {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+#map {
+	margin-bottom: rem-calc(20);
+	width: 100%;
+}
+
+.no-padding-l-r {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.card h4 {
+	margin-bottom: rem-calc(20);
+}
+
+
+
+//----------DETAILS VIEW----------//
+//-------------------------------//
+
+.red {
+	background-color: red;
+}
+
+.blue {
+	background-color: blue;
+}
+
+.green {
+	background-color: green;
+	margin-bottom: rem-calc(20);
+}

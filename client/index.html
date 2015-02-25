@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation Angular</title>
+    <link href="/assets/css/app.css" rel="stylesheet" type="text/css">
+    <link href="/fonts/foundation-icons.css" rel="stylesheet" type="text/css">
+    <script src="/assets/js/foundation.js"></script>
+    <script src="/assets/js/routes.js"></script>
+    <script src="/assets/js/app.js"></script>
+  </head>
+  <body>
+    <div class="vertical grid-frame">
+
+        <!-- Contact Panel -->
+
+        <div zf-panel="" zf-swipe-close="left" id="contactPanel">
+          <div class="vertical grid-block text-center">
+            <i class="fi-results-demographics size-40"></i>
+            <p>Jan van Den Bulk</p>
+          </div>
+
+          <div class="grid-content">
+            <section class="block-list">
+              <ul>
+                <li class="with-chevron">
+                  <a href="#">
+                      <!--<i class="fi-results-demographics size-40"></i>-->
+                      Jan Van den Bulk
+                      <i class="fi-telephone size-40 align-right"></i>
+                  </a>
+                </li>
+
+                <li class="with-chevron"><a href="#">Jan Van den Bulk</a></li>
+                <li class="with-chevron"><a href="#">Jan Van den Bulk</a></li>
+                <li class="with-chevron"><a href="#">Jan Van den Bulk</a></li>
+                <li class="with-chevron"><a href="#">Jan Van den Bulk</a></li>
+                <li class="with-chevron"><a href="#">Jan Van den Bulk</a></li>
+                <li class="with-chevron"><a href="#">Jan Van den Bulk</a></li>
+                <li class="with-chevron"><a href="#">Jan Van den Bulk</a></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+
+        <!-- Title bar -->
+
+        <div class="primary title-bar">
+          <span class="left">
+            <!--<a ui-sref="details"><i class="fi-results-demographics size-40"></i></a>-->
+            <a href="" zf-open="contactPanel"><i class="fi-results-demographics size-40"></i></a>
+          </span>
+        </div>
+
+        <div ng-class="['ui-animation']" ui-view class="grid-block"></div>
+    </div>
+  </body>
+</html>

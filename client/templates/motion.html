@@ -1,0 +1,34 @@
+---
+name: transition
+url: /transition
+---
+
+<div class="grid-content">
+
+	<!-- NG IF -->
+
+	<button class="btn" ng-click="application.slideInDown=!application.slideInDown">Slide In</button>
+
+	<div class="grid-block slideInDown easeIn" ng-if="application.slideInDown">
+		<img id="kitty" src="http://placekitten.com/g/600/300">
+	</div>
+
+	<!-- NG SHOW & NG HIDE -->
+
+	<!--<button class="btn" ng-click="toggle=!toggle">Toggle</button>
+
+	<div class="box on" ng-show="toggle" ng-animate="'box'">On</div>
+	<div class="box off" ng-hide="toggle" ng-animate="'box'">Off</div>-->
+
+	<!--<button class="btn" ng-click="makeItSlide='fadeIn'">Slide In</button>
+	<button class="btn" ng-click="makeItSlide='slideOutUp'">Slide Out</button>
+
+	<div class="base-kitty">
+		<img class="" ng-class="makeItSlide" src="http://placekitten.com/g/600/300">
+	</div>-->
+
+	<!--<input id="setbtn" type="button" value="set" ng-click="myVar='my-class'">
+	<input id="clearbtn" type="button" value="clear" ng-click="myVar=''">
+	<br>
+	<span class="base-class" ng-class="myVar">Sample Text</span>-->
+</div>
